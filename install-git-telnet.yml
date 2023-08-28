@@ -1,0 +1,12 @@
+- name: Install Telnet and Git
+  hosts: datadog-server
+  become: yes
+  tasks:
+    - name: Install Telnet package
+      dnf:
+        name: telnet
+        state: present
+    - name: Install Git package
+      dnf:
+        name: git
+        state: present
