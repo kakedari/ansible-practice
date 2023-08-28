@@ -1,0 +1,5 @@
+- name: Start httpd webserver
+  hosts:  datadog-server
+  tasks:
+    - name: start httpd service
+      service: name=httpd state=started
